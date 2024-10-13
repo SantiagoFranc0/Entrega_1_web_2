@@ -1,0 +1,11 @@
+<?php require 'header.phtml'; ?>
+
+<?php foreach ($marca as $marcas): ?>
+    <div>
+        <a href="autos/<?php echo htmlspecialchars($marcas->id_marca); ?>">
+            <?php echo htmlspecialchars($marcas->nombre); ?>
+        </a>
+    </div>
+<?php endforeach; ?>
+
+<?php require 'footer.phtml'; ?>
