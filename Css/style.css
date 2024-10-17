@@ -1,43 +1,204 @@
-/* Estilos para h2 */
-h2 {
-    color: #0056b3; /* Cambia el color del texto */
-    font-size: 24px; /* Tamaño de fuente */
+/* Estilos generales para el cuerpo */
+body {
+    font-family: Arial, sans-serif; /* Fuente del cuerpo */
+    line-height: 1.6; /* Espaciado entre líneas */
+    margin: 0; /* Sin margen */
+    padding: 0; /* Sin relleno */
+    background-color: #f4f4f4; /* Color de fondo */
+    text-align: center; /* Centrar texto en el cuerpo */
+}
+
+/* Estilos para el encabezado */
+header {
+    background: #0056b3; /* Color de fondo del encabezado */
+    color: #ffffff; /* Color del texto */
+    padding: 10px 0; /* Relleno superior e inferior */
+}
+
+/* Estilos para el menú de navegación */
+nav ul {
+    list-style: none; /* Sin viñetas */
+    padding: 0; /* Sin relleno */
+    text-align: center; /* Centrar texto */
+}
+
+nav ul li {
+    display: inline; /* Mostrar elementos en línea */
+    margin: 0 15px; /* Espacio lateral entre elementos */
+}
+
+nav ul li a {
+    color: #ffffff; /* Color de los enlaces */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold; /* Negrita */
+    padding: 10px 15px; /* Espacio interno alrededor del enlace */
+    border-radius: 25px; /* Bordes redondeados (ajusta el valor para más o menos redondeo) */
+    transition: background 0.3s; /* Suavizar el cambio de color de fondo */
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Color de fondo al pasar el cursor */
+    text-decoration: none; /* Sin subrayado */
+}
+
+/* Estilos para tablas */
+table {
+    margin: 20px auto; /* Centrar la tabla */
+    border-collapse: collapse; /* Colapsar bordes de la tabla */
+    width: 80%; /* Ajustar el ancho de la tabla */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para la tabla */
+    border-radius: 8px; /* Bordes redondeados */
+    overflow: hidden; /* Ocultar bordes de las esquinas */
+}
+
+/* Estilos para las filas de la tabla (tr) */
+tr {
+    background-color: #ffffff; /* Color de fondo de las filas */
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Color de fondo para filas pares */
+}
+
+tr:hover {
+    background-color: #e9ecef; /* Color de fondo al pasar el cursor */
+}
+
+/* Estilos para las celdas de la tabla (td) */
+td {
+    padding: 12px; /* Espacio interno */
+    border: 1px solid #ddd; /* Borde de las celdas */
+    text-align: left; /* Alinear texto a la izquierda */
+}
+
+/* Estilos para los enlaces dentro de las celdas de la tabla */
+td a {
+    color: #0056b3; /* Color del texto de los enlaces */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold; /* Negrita */
+    transition: color 0.3s; /* Suavizar el cambio de color */
+}
+
+td a:hover {
+    color: #ffc107; /* Color amarillo al pasar el cursor */
+    text-decoration: underline; /* Subrayar al pasar el cursor */
+}
+
+/* Estilos para las cabeceras de la tabla (th) */
+th {
+    background-color: #0056b3; /* Color de fondo de las cabeceras */
+    color: #ffffff; /* Color del texto en las cabeceras */
+    padding: 12px; /* Espacio interno */
+}
+
+/* Estilos para h1 y h2 */
+h1, h2 {
+    margin: 20px 0; /* Espacio superior e inferior */
+    text-align: center; /* Centrar texto */
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: #0056b3; /* Color de fondo del footer */
+    color: #ffffff; /* Color del texto */
+    text-align: center; /* Centrar texto */
+    padding: 20px 0; /* Espacio interno */
+    position: relative; /* Posición relativa para el footer */
+    bottom: 0; /* Fijar al fondo */
+    width: 100%; /* Ancho completo */
     margin-top: 20px; /* Espacio superior */
-    margin-bottom: 10px; /* Espacio inferior */
+}
+
+/* Estilos para los párrafos */
+p {
+    color: #555; /* Color del texto */
+    font-size: 16px; /* Tamaño de fuente */
+    line-height: 1.5; /* Espaciado entre líneas */
+    margin: 10px 0; /* Espacio vertical */
 }
 
 /* Estilos para el formulario */
 form {
-    background-color: #fff; /* Color de fondo del formulario */
+    background: #ffffff; /* Color de fondo del formulario */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra para el formulario */
     padding: 20px; /* Espacio interno */
-    border-radius: 5px; /* Bordes redondeados */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para el formulario */
-    margin-bottom: 20px; /* Espacio inferior */
+    margin: 20px auto; /* Margen superior e inferior, centrar horizontalmente */
+    width: 80%; /* Ancho del formulario */
+    max-width: 500px; /* Ancho máximo */
 }
 
-/* Estilos para los campos de entrada en el formulario */
-form input[type="text"],
-form input[type="email"],
-form input[type="password"],
-form textarea {
+/* Estilos para las etiquetas */
+label {
+    display: block; /* Mostrar etiquetas como bloques */
+    margin-bottom: 8px; /* Espacio inferior */
+    font-weight: bold; /* Negrita */
+    color: #333; /* Color del texto */
+}
+
+/* Estilos para los campos de entrada */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
     width: 100%; /* Ancho completo */
     padding: 10px; /* Espacio interno */
-    margin: 10px 0; /* Espacio vertical entre campos */
-    border: 1px solid #ccc; /* Borde */
-    border-radius: 4px; /* Bordes redondeados */
-}
-
-/* Estilos para el botón de envío del formulario */
-form input[type="submit"] {
-    background-color: #007BFF; /* Color de fondo del botón */
-    color: white; /* Color del texto del botón */
-    border: none; /* Sin borde */
-    padding: 10px 15px; /* Espacio interno */
-    border-radius: 4px; /* Bordes redondeados */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    margin-bottom: 15px; /* Espacio inferior */
+    border: 1px solid #ddd; /* Borde de los campos */
+    border-radius: 5px; /* Bordes redondeados */
     font-size: 16px; /* Tamaño de fuente */
+    transition: border-color 0.3s; /* Suavizar el cambio de color */
 }
 
-form input[type="submit"]:hover {
-    background-color: #0056b3; /* Color al pasar el cursor sobre el botón */
+/* Estilo para el enfoque de los campos de entrada */
+input:focus,
+textarea:focus {
+    border-color: #0056b3; /* Color de borde al enfocar */
+    outline: none; /* Sin contorno */
+}
+
+/* Estilos para los botones */
+button {
+    background: #0056b3; /* Color de fondo del botón */
+    color: #ffffff; /* Color del texto */
+    padding: 10px 15px; /* Espacio interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar cursor a puntero */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: background 0.3s; /* Suavizar el cambio de color de fondo */
+}
+
+/* Efecto hover para el botón */
+button:hover {
+    background: #004494; /* Color más oscuro al pasar el cursor */
+}
+
+/* Estilos para los mensajes de error */
+.error {
+    color: #ff0000; /* Color rojo para errores */
+    font-size: 14px; /* Tamaño de fuente para errores */
+    margin-top: -10px; /* Margen superior negativo para acercar al campo */
+    margin-bottom: 15px; /* Espacio inferior */
+}
+
+/* Estilos para enlaces dentro de un div */
+div a {
+    color: #0056b3; /* Color del texto de los enlaces */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold; /* Negrita */
+    transition: color 0.3s; /* Suavizar el cambio de color */
+}
+
+/* Efecto hover para los enlaces */
+div a:hover {
+    text-decoration: underline; /* Subrayar al pasar el cursor */
+    color: #003d80; /* Color del texto al pasar el cursor */
+}
+
+/* Estilos para enlaces deshabilitados (opcional) */
+div a.disabled {
+    color: #ccc; /* Color gris para enlaces deshabilitados */
+    pointer-events: none; /* Desactivar el puntero */
+    text-decoration: none; /* Sin subrayado */
 }

@@ -1,24 +1,7 @@
-<?php require 'header.phtml'?>
-
-
-<?php if (!empty($marca)): ?>
-    <h1><?php echo htmlspecialchars($marca->nombre); ?></h1>
-    <p>Lugar de Fabricación: <?php echo htmlspecialchars($marca->lugar_fabricacion); ?></p>
-<?php endif; ?>
-
-<?php if (!empty($modelos)): ?>
-    <h2>Modelos disponibles:</h2>
-    <?php foreach ($modelos as $modelo): ?>
-        <div>
-            <h3>
-                <a href="<?php echo 'detalle/' . $modelo->id_modelo; ?>">
-                    <?php echo htmlspecialchars($modelo->nombre_modelo); ?>
-                </a>
-            </h3>
-        </div>
-    <?php endforeach; ?>
-<?php else: ?>
-    <p>No hay modelos disponibles para esta marca.</p>
-<?php endif; ?>
-
-<?php require 'footer.phtml'; ?>
+<?php foreach ($modelos as $auto): ?>
+    <div>
+        <a href="detalle/<?php echo htmlspecialchars($auto->id_modelo); ?>">
+            <?php echo htmlspecialchars($auto->nombre_modelo); ?>
+        </a>
+    </div>
+<?php endforeach; ?>

@@ -1,6 +1,6 @@
 <?php
 
-class Usuer_model
+class User_model
 {
 
     private $db;
@@ -16,8 +16,9 @@ class Usuer_model
 
         $query = $this->db->prepare('SELECT * FROM usuario WHERE name =?');
         $query->execute([$name]);
-
-        $usuario = $query->fetch(PDO::FETCH_OBJ);
-        return $usuario;
+        $user = $query->fetch(PDO::FETCH_OBJ);
+        
+        return $user;
     }
 }
+

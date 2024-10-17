@@ -1,6 +1,15 @@
-<?php 
+<?php
 class Auto_view
 {
+    private $user;
+
+
+
+   public function __construct($user) {
+       $this->user = $user; // Se asigna el usuario pasado desde el controlador
+   }
+
+
     public function listar_modelos($modelos,$marca)
     {
         include 'templates/header.phtml';
@@ -10,24 +19,50 @@ class Auto_view
 
     public function mostrar_detalle_modelo($detalle, $nombre_marca)
     {
-        include 'templates/header.phtml';
-        include 'templates/detalle_modelo.phtml';
-        include 'templates/footer.phtml';
+        include 'Templates/header.phtml';
+        include 'Templates/detalle_modelo.phtml';
+        include 'Templates/footer.phtml';
     }
 
-
+public function listar_todos_los_autos($autos){
+    include 'Templates/header.phtml';
+    include 'Templates/mostrar.todos.phtml';
+    include 'Templates/footer.phtml';
+}
 
     public function listarMarcas($marca)
     {
-        include 'templates/header.phtml';
-        include 'templates/Listar_marcas.phtml'; 
-        include 'templates/footer.phtml';
+        include 'Templates/header.phtml';
+        include 'Templates/Listar_marcas.phtml'; 
+        include 'Templates/footer.phtml';
     }
+
+
+    public function mostrarFormularioAgregarAuto($marcas)
+{
+    include 'Templates/header.phtml';
+    include 'Templates/agregar.auto.phtml';
+    include 'Templates/footer.phtml';
+}
+public function mostrarFormularioEditarAuto($autos)
+{
+    include 'Templates/header.phtml';
+    include 'Templates/editar.auto.phtml';
+    include 'Templates/footer.phtml';
+}
+
+// Método para confirmar la eliminación de un auto
+public function confirmarEliminarAuto($auto)
+{
+    include 'Templates/header.phtml';
+    include 'Templates/mostrar.todos.phtml';
+    include 'Templates/footer.phtml';
+}
 
     public function error_id()
     {
-        include 'templates/header.phtml';
-        include 'templates/error_id.phtml';
-        include 'templates/footer.phtml';
+        include 'Templates/header.phtml';
+        include 'Templates/error_id.phtml';
+        include 'Templates/footer.phtml';
     }
 }

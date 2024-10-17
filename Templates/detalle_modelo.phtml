@@ -1,4 +1,4 @@
-<?php require 'header.phtml'?>
+
 
 <?php if (!empty($detalle)): ?>
     <h1><?php echo htmlspecialchars($detalle->nombre_modelo); ?></h1>
@@ -8,5 +8,4 @@
 <?php else: ?>
     <h1>Error: No se encontró el modelo solicitado.</h1>
 <?php endif; ?>
-
-<?php require 'footer.phtml'?>
+    

@@ -1,16 +1,26 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="<?php echo BASE_URL ?>">
-    <title>Lista de Modelos de Autos</title>
-    <link rel="stylesheet" href="Css/style.css">
+   
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lista de Autos</title>
+        <link rel="stylesheet" href="<?php echo BASE_URL; ?>Css/style.css"> <!-- Incluye tu CSS -->
+    </head>
 
-
-</head>
-<body>
-
-</body>
-</html>
-<?php require 'footer.phtml'; ?>
+    <header>
+    <nav>
+        <ul>
+            <li><a href="<?php echo BASE_URL; ?>marcas">Inicio</a></li>
+            <li><a href="<?php echo BASE_URL; ?>autos">Ver Todos los Autos</a></li> 
+            
+            <?php if (isset($_SESSION['ID_USER'])): // Verifica si el usuario está logueado ?>
+                <p> modo administrador </p>
+                <li><a href="<?php echo BASE_URL; ?>autos">Administrar Modelos</a></li>
+                <li><a href="<?php echo BASE_URL; ?>logout">Cerrar Sesión</a></li>
+            <?php else: ?>
+                <li><a href="<?php echo BASE_URL; ?>login">Logueo</a></li>
+            <?php endif; ?>
+        </ul>
+    </nav>
+</header>

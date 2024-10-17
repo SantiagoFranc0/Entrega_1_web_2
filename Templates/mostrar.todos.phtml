@@ -1,0 +1,29 @@
+<h1>Todos los Autos</h1>
+<table>
+    <tr>
+        <th>Nombre del Modelo</th>
+        <th>ID del Modelo</th>
+        <th>Acciones</th>
+    </tr>
+    <?php foreach ($autos as $auto): ?>
+        <tr>
+            <td>
+                <a href="detalle/<?php echo $auto->id_modelo; ?>"><?php echo htmlspecialchars($auto->nombre_modelo); ?></a>
+            </td>
+            <td>
+                <?php echo $auto->id_modelo; ?>
+            </td>
+            <td>
+                <form action="<?php echo BASE_URL . 'autos/eliminar/' . $auto->id_modelo; ?>" method="POST" style="display:inline;">
+                    <button type="submit" onclick="return confirm('¿Estás seguro de que deseas eliminar este auto?');" class="btn btn-danger">Eliminar</button>
+                </form>
+            </td>
+        </tr>
+    <?php endforeach; ?>
+</table>
+
+<h1>Bienvenido al Dashboard</h1>
+<p>Aquí puedes gestionar los autos y ver información relevante.</p>
+
+<a href="<?php echo BASE_URL . 'autos/agregar'; ?>" class="btn btn-primary">Agregar Auto</a>
+<a href="<?php echo BASE_URL . 'autos/editar'; ?>" class="btn btn-warning">Editar Auto</a>

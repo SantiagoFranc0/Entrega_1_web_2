@@ -1,0 +1,24 @@
+<form action="<?php echo BASE_URL; ?>autos/editar" method="POST">
+    <label for="id_modelo">Selecciona un auto para editar:</label>
+    <select id="id_modelo" name="id_modelo" required onchange="cargarDatosAuto(this.value)">
+        <option value="">--Selecciona un modelo--</option>
+        <?php foreach ($autos as $auto): ?>
+            <option value="<?php echo $auto->id_modelo; ?>"><?php echo $auto->nombre_modelo; ?></option>
+        <?php endforeach; ?>
+    </select>
+
+    <label for="nombre_modelo">Nombre del Modelo:</label>
+    <input type="text" name="nombre_modelo" id="nombre_modelo" required>
+
+    <label for="anio">Año:</label>
+    <input type="number" name="anio" id="anio" required>
+
+    <label for="color">Color:</label>
+    <input type="text" name="color" id="color" required>
+
+    <label for="id_marca">Marca:</label>
+
+
+    <button type="submit">Actualizar</button>
+</form>
+s
