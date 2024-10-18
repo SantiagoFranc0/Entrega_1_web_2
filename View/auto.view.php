@@ -6,7 +6,7 @@ class Auto_view
 
 
    public function __construct($user) {
-       $this->user = $user; // Se asigna el usuario pasado desde el controlador
+       $this->user = $user; 
    }
 
 
@@ -51,7 +51,6 @@ public function mostrarFormularioEditarAuto($autos)
     include 'Templates/footer.phtml';
 }
 
-// Método para confirmar la eliminación de un auto
 public function confirmarEliminarAuto($auto)
 {
     include 'Templates/header.phtml';

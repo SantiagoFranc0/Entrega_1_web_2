@@ -1,6 +1,6 @@
 <?php
-require_once('Model/auto.model.php'); // Incluye el modelo que maneja los datos de los autos
-require_once('View/auto.view.php');   // Incluye la vista que mostrará la información de los autos
+require_once('Model/auto.model.php'); 
+require_once('View/auto.view.php');   
 
 class Auto_Controller {
     private $model;
@@ -8,7 +8,7 @@ class Auto_Controller {
 
     public function __construct($res) {
         $this->model = new Auto_model();
-        $this->view = new Auto_view($res->user); // Asegúrate de que tienes esta clase
+        $this->view = new Auto_view($res->user); 
     }
 
     public function listarModelos($id_marca) {
@@ -62,22 +62,22 @@ class Auto_Controller {
 
     public function editarAuto() {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            // Procesa la edición del auto
+           
             $id_modelo = $_POST['id_modelo'];
             $nombre_modelo = $_POST['nombre_modelo'];
             $anio = $_POST['anio'];
             $color = $_POST['color'];
             $id_marca = $_POST['id_marca'];
     
-            // Llama al método del modelo para editar el auto
+          
             $this->model->editarAuto($id_modelo, $nombre_modelo, $anio, $color, $id_marca);
             
-            // Redirige a la lista de autos
+           
             header('Location: ' . BASE_URL . 'autos');
-            exit; // Asegúrate de salir después de la redirección
+            exit;
         } else {
-            // Si la solicitud es GET, muestra el formulario de edición
-            $autos = $this->model->getTodosLosAutos(); // O la función que utilices para obtener los autos
+        
+            $autos = $this->model->getTodosLosAutos();
 
             $this->view->mostrarFormularioEditarAuto($autos);
         }

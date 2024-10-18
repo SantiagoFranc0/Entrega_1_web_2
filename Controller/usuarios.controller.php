@@ -29,7 +29,6 @@ class Usuarios_controller {
         $name = $_POST['name'];
         $password = $_POST['password'];
     
-        // Imprime los datos para ver si llegan correctamente
         error_log("Intento de inicio de sesión con nombre: $name");
     
         $userFromDB = $this->model->getUserByName($name);
@@ -37,7 +36,8 @@ class Usuarios_controller {
         if ($userFromDB && password_verify($password, $userFromDB->password)) {
             $_SESSION['ID_USER'] = $userFromDB->id_usuario;
             $_SESSION['NAME_USER'] = $userFromDB->name;
-            return $this->view->showLogin("Contraseña correcta");
+            header('Location: '.BASE_URL.'autos');
+            
             exit();
         } else {
             return $this->view->showLogin("Nombre de usuario o contraseña incorrectos");
