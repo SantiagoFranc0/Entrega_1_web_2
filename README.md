@@ -1,5 +1,5 @@
 
-Primera Entrega TPE 1 WEB 2
+ TPE  WEB 2
 Integrantes: Santiago Tomas Franco, Tomas Prado
 
 En esta entrega, proponemos el diseño de una base de datos llamada "auto" que contendrá dos tablas, en una de ellas varias marcas de autos llamada "marca", cada una con un identificador único.
